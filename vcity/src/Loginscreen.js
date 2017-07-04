@@ -24,14 +24,24 @@ class Loginscreen extends Component {
   }
   render() {
     return (
-      <div className="loginscreen">
+      
+      <div>
         {this.state.loginscreen}
-        <div>
-          {this.state.loginmessage}
-            <div>
-               <button className="btn waves-effect waves-light" label={this.state.buttonLabel} primary={true}  onClick={(event) => this.handleClick(event)}/>
-           </div>
-        </div>
+         
+         <div className="container">
+         <div className="section checkin-container">
+            {this.state.loginmessage}
+
+                <div className="input-field col s8 m8 l8">
+                    <button className="btn waves-effect waves-light" label={this.state.buttonLabel} primary={true}  style={buttonStyle} onClick={(event) => this.handleClick(event)}>
+                        {this.state.buttonLabel}
+                        <i className="material-icons right">send</i>
+                    </button>
+                  </div>
+                 
+
+          </div>
+          </div>
       </div>
     );
   }
@@ -63,4 +73,10 @@ handleClick(event){
   }
 
 }
+
+var buttonStyle = {
+  width: '66%',
+};
+
+
 export default Loginscreen;

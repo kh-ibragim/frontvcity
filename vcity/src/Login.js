@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import UploadScreen from './UploadScreen';
+
 class Login extends Component {
 constructor(props){
   super(props);
@@ -10,27 +11,32 @@ constructor(props){
   }
  }
 render() {
-    return (
+    return (  
       <div>
-        <div className="row">
-            <div className="input-field col s8 m8 l8 ">
-                <i className="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" required onChange = {(event,newValue) => this.setState({username:newValue})} />
-                <label for="icon_prefix" >Name</label>
-            </div>
+        <div className="container">
+            <div className="section checkin-container">
+                <div className="row">
+                    
+                    <div className="input-field col s8 m8 l8 ">
+                        <i className="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" className="validate" required onChange = {(event,newValue) => this.setState({username:newValue})} />
+                        <label for="icon_prefix" >Name</label>
+                    </div>
 
-            <div className="input-field col s8 m8 l8 ">
-                <i className="material-icons prefix">https</i>
-                <input id="password" type="password" required onChange = {(event,newValue) => this.setState({password:newValue})}/>
-                <label for="password" >Password</label>
-            </div>
+                    <div className="input-field col s8 m8 l8 ">
+                        <i className="material-icons prefix">https</i>
+                        <input id="password" type="password" className="validate" required onChange = {(event,newValue) => this.setState({password:newValue})}/>
+                        <label for="password" >Password</label>
+                    </div>
             
-            <div className="input-field col s8 m8 l8">
-                <button className="btn waves-effect waves-light" type="submit" name="action" onClick={(event) => this.handleClick(event)}>Submit
-    		        <i className="material-icons right">send</i>
-  		        </button>
-  		    </div>
-
+                    <div className="input-field col s8 m8 l8">
+                        <button className="btn waves-effect waves-light" type="submit" name="action" style={buttonStyle}  onClick={(event) => this.handleClick(event)}>Submit
+    		            <i className="material-icons right">send</i>
+  		            </button>
+  		        
+                  </div>
+            </div>  
+         </div>
         </div>  
       </div>
     );
@@ -66,5 +72,9 @@ render() {
     });
  }
 }
+
+var buttonStyle = {
+  width: '100%',
+};
 
 export default Login;

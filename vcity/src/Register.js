@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Login from './Login';
+
 class Navi extends Component {
 
    render() {
       return (
+   <div>       
     <nav className="black" role="navigation">
       <div className="nav-wrapper container">
         <a id="logo-container" href="#" className="brand-logo">VCity</a>
@@ -17,6 +19,7 @@ class Navi extends Component {
         <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
       </div>
     </nav>
+    </div>
       );
    }
 }
@@ -62,7 +65,7 @@ class Form extends Component {
           <label for="age" data-error="Введите корректно свой возраст">Age</label>
         </div>
 
-        <div className="input-field col s8 m8 l8 ">
+    {/*    <div className="input-field col s8 m8 l8 "> 
           <i className="material-icons prefix">receipt</i>
     		<select multiple className="icons">
       			<option value="" disabled selected>Choose your interest</option>
@@ -72,19 +75,19 @@ class Form extends Component {
       			<option value="sport" data-icon="images/sport.png" className="circle">Sport</option>
       			<option value="photo" data-icon="images/photo.png" className="circle">Photo</option>
     		</select>
-        </div>
+        </div>*/}
 
-
+        {/* 
         <div className="input-field col s8 m8 l8">
           <i className="material-icons prefix">supervisor_account</i>
       		<input name="group1" type="radio" checked id="man" />
       			<label for="man">Man</label>
       		<input name="group1" type="radio" id="female" />
       			<label for="female">Female</label><br/><br/>
-        </div>
+        </div>*/}
 
         <div className="input-field col s8 m8 l8">
-          <button className="btn waves-effect waves-light" type="submit" name="action" onClick={(event) => this.handleClick(event)}> Submit
+          <button className="btn waves-effect waves-light" type="submit" name="action" style={buttonStyle} onClick={(event) => this.handleClick(event)}> Submit
             <i className="material-icons right">send</i>
           </button>
         </div>
@@ -139,4 +142,9 @@ class Register extends Component {
     );
   }
 }
+
+var buttonStyle = {
+  width: '100%',
+};
+
 export default Register;

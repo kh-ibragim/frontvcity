@@ -25,6 +25,8 @@ class Content extends Component {
 class App extends Component {
   render() {
     return (
+<div>
+  <Content />   
   <div className="container">
     <div className="section checkin-container">
       <div className="row">
@@ -80,11 +82,10 @@ class App extends Component {
       			<label for="female">Female</label><br/><br/>
         </div>
 
-
-
       </div>
     </div>
   </div>
+</div>
     );
   }
 }

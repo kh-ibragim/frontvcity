@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import App from './App';
-import Register from './App';
+import Login from './Login';
+import Register from './Register';
 class Loginscreen extends Component {
   constructor(props){
     super(props);
@@ -29,14 +29,38 @@ class Loginscreen extends Component {
         <div>
           {this.state.loginmessage}
             <div>
-               <button className="btn waves-effect waves-light" label={this.state.buttonLabel} primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+               <button className="btn waves-effect waves-light" label={this.state.buttonLabel} primary={true}  onClick={(event) => this.handleClick(event)}/>
            </div>
         </div>
       </div>
     );
   }
+handleClick(event){
+    // console.log("event",event);
+    var loginmessage;
+    if(this.state.isLogin){
+      var loginscreen=[];
+      loginscreen.push(<Register parentContext={this}/>);
+      loginmessage = "Already registered.Go to Login";
+      this.setState({
+                     loginscreen:loginscreen,
+                     loginmessage:loginmessage,
+                     buttonLabel:"Login",
+                     isLogin:false
+                   })
+    }
+    else{
+      var loginscreen=[];
+      loginscreen.push(<Login parentContext={this}/>);
+      loginmessage = "Not Registered yet.Go to registration";
+      this.setState({
+                     loginscreen:loginscreen,
+                     loginmessage:loginmessage,
+                     buttonLabel:"Register",
+                     isLogin:true
+                   })
+    }
+  }
+
 }
-const style = {
-  margin: 15,
-};
 export default Loginscreen;

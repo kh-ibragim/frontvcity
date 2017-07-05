@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from './Login';
 import Register from './Register';
+import Footer from './Footer';
 class Loginscreen extends Component {
   constructor(props){
     super(props);
@@ -42,6 +43,7 @@ class Loginscreen extends Component {
 
           </div>
           </div>
+
       </div>
     );
   }

@@ -1,29 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Login from './Login';
-
-class Navi extends Component {
-
-   render() {
-      return (
-   <div>       
-    <nav className="black" role="navigation">
-      <div className="nav-wrapper container">
-        <a id="logo-container" href="#" className="brand-logo">VCity</a>
-          <ul className="right hide-on-med-and-down">
-            <li><a href="#">Регистрация</a></li>
-          </ul>
-          <ul id="nav-mobile" className="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-        <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
-      </div>
-    </nav>
-    </div>
-      );
-   }
-}
-
+import Navigation from './Navigation';
 
 class Form extends Component {
   constructor(props){
@@ -99,7 +77,7 @@ class Form extends Component {
    }
 
    handleClick(event){
-    var apiBaseUrl = "http://localhost:4000/users/";
+    var apiBaseUrl = "http://localhost:3030/users/";
     console.log("values",this.state.name,this.state.password,this.state.email,this.state.age);
     //To be done:check for empty values before hitting submit
     var self = this;
@@ -109,7 +87,7 @@ class Form extends Component {
         "email":this.state.email,
         "age":this.state.age
     }
-    axios.post(apiBaseUrl+'/register', payload)
+    axios.post(apiBaseUrl, payload)
    .then(function (response) {
      console.log(response);
         if(response.data.code == 200){
@@ -136,8 +114,8 @@ class Register extends Component {
   render() {
     return (
         <div>
-            <Navi />
-            <Form />   
+            <Navigation />
+            <Form />  
         </div>
     );
   }

@@ -80,7 +80,7 @@ p {
 }
 
 footer.page-footer {
-  margin: 0;
+
 }
 
  /* label color */
@@ -110,3 +110,4 @@ footer.page-footer {
    .input-field .prefix.active {
      color: #000;
    }
+

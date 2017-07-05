@@ -1,40 +1,58 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import UploadScreen from './UploadScreen';
+import Navigation from './Navigation';
+
+const io = require('socket.io-client');
+const socket = io('http://localhost:3030');
 
 class Login extends Component {
 constructor(props){
   super(props);
-  this.state={
-  username:'',
-  password:''
-  }
+    this.state = {email: '', password:''};
+    this.handleSubmit = this.handleSubmit.bind(this);
  }
+
+handleSubmit(event) {
+    socket.emit('authenticate', {
+        strategy: 'local',
+        email: this.state.email,
+        password: this.state.password
+    }, function(message, data) {
+    console.log(message); 
+    console.log(data); 
+});
+    event.preventDefault();
+  }
+
 render() {
     return (  
       <div>
+          <Navigation />
         <div className="container">
             <div className="section checkin-container">
                 <div className="row">
-                    
+
+                    <form onSubmit={this.handleSubmit}>
                     <div className="input-field col s8 m8 l8 ">
                         <i className="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" type="text" className="validate" required onChange = {(event,newValue) => this.setState({username:newValue})} />
-                        <label for="icon_prefix" >Name</label>
+                        <input id="icon_prefix" type="text" className="validate" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
+                        <label for="icon_prefix" >email</label>
                     </div>
 
                     <div className="input-field col s8 m8 l8 ">
                         <i className="material-icons prefix">https</i>
-                        <input id="password" type="password" className="validate" required onChange = {(event,newValue) => this.setState({password:newValue})}/>
+                        <input id="password" type="password" className="validate" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
                         <label for="password" >Password</label>
                     </div>
             
                     <div className="input-field col s8 m8 l8">
-                        <button className="btn waves-effect waves-light" type="submit" name="action" style={buttonStyle}  onClick={(event) => this.handleClick(event)}>Submit
+                        <button className="btn waves-effect waves-light" type="submit" style={buttonStyle} value="Submit">Submit
     		            <i className="material-icons right">send</i>
   		            </button>
-  		        
                   </div>
+                  </form>
+
             </div>  
          </div>
         </div>  
@@ -42,35 +60,7 @@ render() {
     );
   }
   
-  handleClick(event){
-    var apiBaseUrl = "http://localhost:4000/users/";
-    var self = this;
-    var payload={
-        "email":this.state.username,
-        "password":this.state.password
-    }
-    axios.post(apiBaseUrl+'login', payload)
-    .then(function (response) {
-        console.log(response);
-        if(response.data.code == 200){
-            console.log("Login successfull");
-            var uploadScreen=[];
-            uploadScreen.push(<UploadScreen appContext={self.props.appContext}/>)
-            self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
-        }
-        else if(response.data.code == 204){
-            console.log("Username password do not match");
-            alert("username password do not match")
-        }
-        else{
-            console.log("Username does not exists");
-            alert("Username does not exist");
-        }
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
- }
+
 }
 
 var buttonStyle = {

@@ -3,6 +3,9 @@ import axios from 'axios';
 import Login from './Login';
 import Navigation from './Navigation';
 
+const io = require('socket.io-client');
+const socket = io('http://localhost:3030');
+
 class Form extends Component {
   constructor(props){
     super(props);
@@ -13,33 +16,49 @@ class Form extends Component {
       age:''
     }
   }
+
+handleSubmit(event) {
+    socket.emit('users', {
+        strategy: 'local',
+        name: this.state.name,
+        password: this.state.password,
+        email: this.state.email,
+        age: this.state.age
+    }, function(message, data) {
+    console.log(message); 
+    console.log(data); 
+});
+    event.preventDefault();
+  }
+
    render() {
       return (
   <div className="container">
     <div className="section checkin-container">
       <div className="row">
 
+        <form onSubmit={this.handleSubmit}>
         <div className="input-field col s8 m8 l8 ">
           <i className="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" className="validate" pattern="[a-zA-Z0-9]+" required onChange = {(event,newValue) => this.setState({first_name:newValue})} />
+          <input id="icon_prefix" type="text" className="validate" pattern="[a-zA-Z0-9]+" required value={this.state.name} onChange={e => this.setState({ name: e.target.value })} />
           <label for="icon_prefix" data-error="Name должно содержать только символы из латинского алфавита и цифры">Name</label>
         </div>
 
         <div className="input-field col s8 m8 l8 ">
          <i className="material-icons prefix">https</i>
-          <input id="password" type="password" required pattern="(?=.*\d)\w+.{6,30}" className="validate" required onChange = {(event,newValue) => this.setState({password:newValue})}/>
+          <input id="password" type="password" required pattern="(?=.*\d)\w+.{6,30}" className="validate" required value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
           <label for="password" data-error="Пароль должен состоять минимально из 6 латинских символов и включать, по крайней мере одну букву и одну цифру">Password</label>
         </div>
 
         <div className="input-field col s8 m8 l8 ">
          <i className="material-icons prefix">email</i>
-          <input id="email" type="email" className="validate" required onChange = {(event,newValue) => this.setState({email:newValue})}/>
+          <input id="email" type="email" className="validate" required value={this.state.email} onChange={e => this.setState({ email: e.target.value })}/>
           <label for="email" data-error="Введите корректно свой email">Email</label>
         </div>
 
         <div className="input-field col s8 m8 l8 ">
          <i className="material-icons prefix">assessment</i>
-          <input id="age" type="number" min="16" max="120" className="validate" required onChange = {(event,newValue) => this.setState({age:newValue})}/>
+          <input id="age" type="number" min="16" max="120" className="validate" requiredvalue={this.state.age} onChange={e => this.setState({ age: e.target.value })}/>
           <label for="age" data-error="Введите корректно свой возраст">Age</label>
         </div>
 
@@ -65,47 +84,18 @@ class Form extends Component {
         </div>*/}
 
         <div className="input-field col s8 m8 l8">
-          <button className="btn waves-effect waves-light" type="submit" name="action" style={buttonStyle} onClick={(event) => this.handleClick(event)}> Submit
+          <button className="btn waves-effect waves-light" type="submit" style={buttonStyle} value="Submit"> Submit
             <i className="material-icons right">send</i>
           </button>
         </div>
-
+      </form>
       </div>
     </div>
   </div>
       );
    }
 
-   handleClick(event){
-    var apiBaseUrl = "http://localhost:3030/users/";
-    console.log("values",this.state.name,this.state.password,this.state.email,this.state.age);
-    //To be done:check for empty values before hitting submit
-    var self = this;
-    var payload={
-        "name": this.state.name,
-        "password":this.state.password,
-        "email":this.state.email,
-        "age":this.state.age
-    }
-    axios.post(apiBaseUrl, payload)
-   .then(function (response) {
-     console.log(response);
-        if(response.data.code == 200){
-            //  console.log("registration successfull");
-            var loginscreen=[];
-            loginscreen.push(<Login parentContext={this}/>);
-            var loginmessage = "Not Registered yet.Go to registration";
-            self.props.parentContext.setState({loginscreen:loginscreen,
-            loginmessage:loginmessage,
-            buttonLabel:"Register",
-            isLogin:true
-            });
-        }
-   })
-   .catch(function (error) {
-     console.log(error);
-   });
-  }
+
 
 
 }

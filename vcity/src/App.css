@@ -82,7 +82,10 @@ p {
 footer.page-footer {
 
 }
+.photo{
+  text-align: center;
 
+}
  /* label color */
    .input-field label {
      color: #000;

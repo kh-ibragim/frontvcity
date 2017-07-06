@@ -14,10 +14,10 @@ class Form extends Component {
       password:'',
       email:'',
       age:'',
-      sex: ''
+      sex: 'true',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.toggleChange = this.toggleChange.bind(this); 
   }
 
 
@@ -46,27 +46,29 @@ handleSubmit(event) {
     event.preventDefault();
   }
 
-  handleChange(event) {
-    this.setState({sex: event.target.value});
+
+  toggleChange = () => {
+    this.setState({
+      sex: !this.state.sex,
+    });
+    
   }
-   render() {
+
+
+render() {
       return (
   <div className="container">
     <div className="section checkin-container">
       <div className="row">
 
-<div className="col s8 m8 l8 ">
-      <div className="card">
-        <div className="card-image">
-          <img src="images/user.png"/>
-          <span className="card-title">Card Title</span>
-          <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
+      <div className="col s8 m8 l8 ">
+        <div className="card">
+          <div className="photo">
+          <img className="responsive-img" src="images/user.png"/>
+          <a className="btn-floating halfway-fab waves-effect waves-light black" title="Download photo"><i className="material-icons">add</i></a>
         </div>
-        <div className="card-content">
-          <p>I am a very simple card.</p>
         </div>
       </div>
- </div>
 
         <form onSubmit={this.handleSubmit}>
         <div className="input-field col s8 m8 l8 ">
@@ -104,15 +106,15 @@ handleSubmit(event) {
       			<option value="photo" data-icon="images/photo.png" className="circle">Photo</option>
     		</select>
         </div>*/}
-{/*
+
         <div className="input-field col s8 m8 l8">
           <i className="material-icons prefix">supervisor_account</i>
-      		<input name="man" type="radio" value="true"  onChange={e => this.setState({ sex: e.target.value })} />
+      		<input type="radio" name="sex" value="man" checked={this.state.sex} onChange={this.toggleChange}/>
       			<label for="man">Man</label>
-      		<input name="female" type="radio" value="false" onChange={e => this.setState({ sex: e.target.value })}  />
+      		<input type="radio" name="sex"  value="female"/>
       			<label for="female">Female</label><br/><br/>
         </div>
-*/}
+
         <div className="input-field col s8 m8 l8">
           <button className="btn waves-effect waves-light" type="submit" style={buttonStyle} value="Submit"> Submit
             <i className="material-icons right">send</i>

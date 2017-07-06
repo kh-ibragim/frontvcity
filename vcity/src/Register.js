@@ -55,6 +55,19 @@ handleSubmit(event) {
     <div className="section checkin-container">
       <div className="row">
 
+<div className="col s8 m8 l8 ">
+      <div className="card">
+        <div className="card-image">
+          <img src="images/user.png"/>
+          <span className="card-title">Card Title</span>
+          <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
+        </div>
+        <div className="card-content">
+          <p>I am a very simple card.</p>
+        </div>
+      </div>
+ </div>
+
         <form onSubmit={this.handleSubmit}>
         <div className="input-field col s8 m8 l8 ">
           <i className="material-icons prefix">account_circle</i>

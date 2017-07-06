@@ -21,6 +21,14 @@ handleSubmit(event) {
     }, function(message, data) {
     console.log(message); 
     console.log(data); 
+    if(data){
+        alert("Login successfull");
+    }
+    else{
+        alert("Incorrect Email or password ");
+    }
+
+
 });
     event.preventDefault();
   }

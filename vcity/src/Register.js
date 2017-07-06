@@ -13,24 +13,42 @@ class Form extends Component {
       name:'',
       password:'',
       email:'',
-      age:''
+      age:'',
+      sex: ''
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
+
 handleSubmit(event) {
-    socket.emit('users', {
-        strategy: 'local',
+    socket.emit('users::create', {
         name: this.state.name,
         password: this.state.password,
         email: this.state.email,
-        age: this.state.age
-    }, function(message, data) {
+        age: this.state.age,
+        sex: 'true'
+    }, (error, message) => {
+    
     console.log(message); 
-    console.log(data); 
+    console.log(error);
+
+    if (message)
+    {
+      alert("Successful registration");
+    }
+    else if(error.code==409)
+    {
+      alert("Email already exists")
+    }
+    
 });
     event.preventDefault();
   }
 
+  handleChange(event) {
+    this.setState({sex: event.target.value});
+  }
    render() {
       return (
   <div className="container">
@@ -58,7 +76,7 @@ handleSubmit(event) {
 
         <div className="input-field col s8 m8 l8 ">
          <i className="material-icons prefix">assessment</i>
-          <input id="age" type="number" min="16" max="120" className="validate" requiredvalue={this.state.age} onChange={e => this.setState({ age: e.target.value })}/>
+          <input id="age" type="number" min="16" max="120" className="validate" required value={this.state.age} onChange={e => this.setState({ age: e.target.value })}/>
           <label for="age" data-error="Введите корректно свой возраст">Age</label>
         </div>
 
@@ -73,22 +91,22 @@ handleSubmit(event) {
       			<option value="photo" data-icon="images/photo.png" className="circle">Photo</option>
     		</select>
         </div>*/}
-
-        {/* 
+{/*
         <div className="input-field col s8 m8 l8">
           <i className="material-icons prefix">supervisor_account</i>
-      		<input name="group1" type="radio" checked id="man" />
+      		<input name="man" type="radio" value="true"  onChange={e => this.setState({ sex: e.target.value })} />
       			<label for="man">Man</label>
-      		<input name="group1" type="radio" id="female" />
+      		<input name="female" type="radio" value="false" onChange={e => this.setState({ sex: e.target.value })}  />
       			<label for="female">Female</label><br/><br/>
-        </div>*/}
-
+        </div>
+*/}
         <div className="input-field col s8 m8 l8">
           <button className="btn waves-effect waves-light" type="submit" style={buttonStyle} value="Submit"> Submit
             <i className="material-icons right">send</i>
           </button>
         </div>
       </form>
+
       </div>
     </div>
   </div>

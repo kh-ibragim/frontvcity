@@ -28,22 +28,18 @@ class Loginscreen extends Component {
       
       <div>
         {this.state.loginscreen}
-         
-         <div className="container">
-         <div className="section checkin-container">
-            {this.state.loginmessage}
-
-                <div className="input-field col s8 m8 l8">
-                    <button className="btn waves-effect waves-light" label={this.state.buttonLabel} primary={true}  style={buttonStyle} onClick={(event) => this.handleClick(event)}>
+        <div className="uk-section uk-section-overlap checkin-container">
+            <div className="uk-container">
+              <div className="uk-margin">
+                <div className="uk-inline">
+                  <button className="uk-button uk-button-secondary uk-width-1-1" label={this.state.buttonLabel} primary={true}  onClick={(event) => this.handleClick(event)}>
                         {this.state.buttonLabel}
-                        <i className="material-icons right">send</i>
-                    </button>
-                  </div>
-                 
+                  </button>
+                </div>
+              </div>
 
+            </div>
           </div>
-          </div>
-
       </div>
     );
   }

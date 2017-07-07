@@ -47,7 +47,8 @@ p {
   }
 
   .checkin-container {
-    margin-left: 20%;
+    margin-left: 28%;
+    margin-right: 28%;
   }
 
 @media only screen and (max-width : 992px) {
@@ -59,7 +60,8 @@ p {
     top: 10%;
   }
       .checkin-container {
-    margin-left: 15%;
+    margin-left: 18%;
+    margin-right: 18%;
   }
 }
 
@@ -68,49 +70,8 @@ p {
     top: 0;
   }
     .checkin-container {
-    margin-left: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
 }
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-
-}
-.photo{
-  text-align: center;
-
-}
- /* label color */
-   .input-field label {
-     color: #000;
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #000;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #000;
-   }
 

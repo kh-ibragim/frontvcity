@@ -37,31 +37,31 @@ render() {
     return (  
       <div>
           <Navigation />
-        <div className="container">
-            <div className="section checkin-container">
-                <div className="row">
-
+        <div className="uk-section checkin-container">
+            <div className="uk-container">
                     <form onSubmit={this.handleSubmit}>
-                    <div className="input-field col s8 m8 l8 ">
-                        <i className="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" type="text" className="validate" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
-                        <label for="icon_prefix" >email</label>
+
+                    <div className="uk-margin">
+                        <div className="uk-inline">
+                            <span className="uk-form-icon" uk-icon="icon: user"></span>
+                            <input id="icon_prefix" type="text" className="validate uk-input uk-form-width-large" placeholder="Email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
+                        </div>
                     </div>
 
-                    <div className="input-field col s8 m8 l8 ">
-                        <i className="material-icons prefix">https</i>
-                        <input id="password" type="password" className="validate" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
-                        <label for="password" >Password</label>
+                    <div className="uk-margin">
+                        <div className="uk-inline">
+                            <span className="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                            <input id="password" type="password" className="validate uk-input uk-form-width-large" placeholder="Password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
+                        </div>
                     </div>
             
-                    <div className="input-field col s8 m8 l8">
-                        <button className="btn waves-effect waves-light" type="submit" style={buttonStyle} value="Submit">Submit
-    		            <i className="material-icons right">send</i>
-  		            </button>
-                  </div>
+                    <div className="uk-margin">
+                        <div className="uk-inline">
+                        <button className="uk-button uk-button-danger" type="submit" style={buttonStyle} value="Submit">Submit
+  		                </button>
+                      </div>
+                       </div>
                   </form>
-
-            </div>  
          </div>
         </div>  
       </div>

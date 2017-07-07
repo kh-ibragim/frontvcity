@@ -42,7 +42,7 @@ render() {
                     <form onSubmit={this.handleSubmit}>
 
                     <div className="uk-margin">
-                        <div className="uk-inline">
+                        <div className="uk-inline uk-form-password">
                             <span className="uk-form-icon" uk-icon="icon: user"></span>
                             <input id="icon_prefix" type="text" className="validate uk-input uk-form-width-large" placeholder="Email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
                         </div>

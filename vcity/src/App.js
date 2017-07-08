@@ -11,12 +11,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <h1>App</h1>
-        <ul>
-          <li><Link to='/login'>Login</Link></li>
-          <li><Link to='/registration'>Registration</Link></li>
+      <div>
+        <nav className="uk-navbar-container" uk-navbar>
+    <div className="uk-navbar-left">
+        <ul className="uk-navbar-nav">
+            <li className="uk-active"><Link to='/login'>Login</Link></li>
+            <li className="uk-parent"><Link to='/registration'>Registration</Link></li>
+            <li><a href=""></a></li>
         </ul>
+    </div>
+</nav>
         {/* добавили вывод потомков */}
         {this.props.children}
       </div>

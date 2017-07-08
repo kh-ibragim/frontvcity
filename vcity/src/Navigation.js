@@ -5,10 +5,14 @@ class Navigation extends Component {
    render() {
       return (
    <div>       
-<nav className="uk-navbar-container uk-margin" uk-navbar>
-    <div className="uk-navbar-center">
-        <a className="uk-navbar-item uk-logo" href="#">VCity</a>
-      </div>
+<nav className="uk-navbar-container" uk-navbar>
+    <div className="uk-navbar-left">
+        <ul className="uk-navbar-nav">
+            <li className="uk-active">Login<a href=""></a></li>
+            <li className="uk-parent">Page<a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
 </nav>
     </div>
       );

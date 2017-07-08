@@ -124,11 +124,11 @@ render() {
 
 }
 
-class Register extends Component {
+class RegistrationPage extends Component {
   render() {
     return (
         <div>
-            <Navigation />
+
             <Form />  
         </div>
     );
@@ -139,4 +139,4 @@ var buttonStyle = {
   width: '100%',
 };
 
-export default Register;
+export default RegistrationPage;

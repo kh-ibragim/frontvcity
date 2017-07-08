@@ -36,7 +36,7 @@ handleSubmit(event) {
 render() {
     return (  
       <div>
-          <Navigation />
+
         <div className="uk-section checkin-container">
             <div className="uk-container">
                     <form onSubmit={this.handleSubmit}>

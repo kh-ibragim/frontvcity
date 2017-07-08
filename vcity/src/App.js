@@ -3,7 +3,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import Loginscreen from './Loginscreen'
 import { Link } from 'react-router'
 injectTapEventPlugin();
 

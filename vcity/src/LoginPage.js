@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import UploadScreen from './UploadScreen';
-import Navigation from './Navigation';
+
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');

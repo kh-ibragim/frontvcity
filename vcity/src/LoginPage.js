@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { browserHistory } from 'react-router'
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');
@@ -20,7 +20,7 @@ handleSubmit(event) {
     console.log(message); 
     console.log(data); 
     if(data){
-        alert("Login successfull");
+        browserHistory.push('/mycity');
     }
     else{
         alert("Incorrect Email or password ");

@@ -40,7 +40,7 @@ handleSubmit(event) {
     {
       alert("Successful registration");
     }
-    else if(error.code==409)
+    else if(error.code===409)
     {
       alert("Email already exists")
     }
@@ -75,7 +75,7 @@ render() {
         <div className="uk-margin">
           <div className="uk-inline">
               <span className="uk-form-icon" uk-icon="icon: user"></span>
-              <input id="password" type="password" required pattern="(?=.*\d)\w+.{6,30}" className="validate uk-input uk-form-width-large" placeholder="Password" required value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
+              <input id="password" type="password" pattern="(?=.*\d)\w+.{6,30}" className="validate uk-input uk-form-width-large" placeholder="Password" required value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
               <label for="password" data-error="Пароль должен состоять минимально из 6 латинских символов и включать, по крайней мере одну букву и одну цифру"></label>
           </div>
         </div>
@@ -133,8 +133,5 @@ class RegistrationPage extends Component {
   }
 }
 
-var buttonStyle = {
-  width: '100%',
-};
 
 export default RegistrationPage;

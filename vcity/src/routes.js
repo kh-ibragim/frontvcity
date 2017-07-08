@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Content from './App';
-import registerServiceWorker from './registerServiceWorker';
 import NotFound from './NotFound'
 import LoginPage from './LoginPage'
 import RegistrationPage from './RegistrationPage'
 import MycityPage from './MycityPage'
 import Admin from './Admin'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
 ReactDOM.render(<Router history={browserHistory}>
     

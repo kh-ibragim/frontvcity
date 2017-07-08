@@ -4,33 +4,25 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import Loginscreen from './Loginscreen'
+import { Link } from 'react-router'
 injectTapEventPlugin();
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      loginPage:[],
-      uploadScreen:[]
-    }
-  }
-  componentWillMount(){
-    var loginPage =[];
-    loginPage.push(<Loginscreen parentContext={this}/>);
-    this.setState({
-                  loginPage:loginPage
-                    })
-  }
+
   render() {
     return (
-      <div className="App">
-        {this.state.loginPage}
-        {this.state.uploadScreen}
+      <div className='container'>
+        <h1>App</h1>
+        <ul>
+          <li><Link to='/login'>Login</Link></li>
+          <li><Link to='/registration'>Registration</Link></li>
+        </ul>
+        {/* добавили вывод потомков */}
+        {this.props.children}
       </div>
-    );
+    )
   }
 }
-
 
 
 export default App;

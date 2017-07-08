@@ -42,14 +42,14 @@ render() {
                     <div className="uk-margin">
                         <div className="uk-inline uk-form-password">
                             <span className="uk-form-icon" uk-icon="icon: user"></span>
-                            <input id="icon_prefix" type="text" className="validate uk-input uk-form-width-large" placeholder="Email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
+                            <input id="icon_prefix" type="text" required className="validate uk-input uk-form-width-large" placeholder="Email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
                         </div>
                     </div>
 
                     <div className="uk-margin">
                         <div className="uk-inline">
                             <span className="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                            <input id="password" type="password" className="validate uk-input uk-form-width-large" placeholder="Password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
+                            <input id="password" type="password" required className="validate uk-input uk-form-width-large" placeholder="Password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
                         </div>
                     </div>
             

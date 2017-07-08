@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import axios from "axios";
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');
@@ -12,15 +12,27 @@ class Form extends Component {
       password:'',
       email:'',
       age:'',
-      sex: '',
+      sex: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleOptionChange = this.handleOptionChange.bind(this); 
+    this.handleOptionChange = this.handleOptionChange.bind(this);
   }
+componentDidMount() {
+  var q=[];
+axios({
+  method:'get',
+  url:'http://localhost:3030/interests',
+})
+  .then(function(response) {
+  const template = Object.keys(response.data.data).map(item => q[item]=response.data.data[item].name);
+console.log(template);
+});
+}
 
   getInitialState() {
     return {
-      selectedOption: 'true'
+      selectedOption: 'true',
+      interests: {}
     };
   }
 
@@ -59,6 +71,7 @@ handleOptionChange(changeEvent) {
 
 render() {
       return (
+        
   <div className="uk-section checkin-container">
     <div className="uk-container">
 
@@ -98,7 +111,7 @@ render() {
 
         <div className="uk-margin">
           <div className="uk-form-controls">
-      		<label><input className="uk-radio" type="radio" name="sex" value="true" checked={this.state.selectedOption === 'true'}  onChange={this.handleOptionChange}/>Man</label>
+      		<label><input className="uk-radio" type="radio" name="sex" value="true" checked={this.state.selectedOption === 'true'}  onChange={this.handleOptionChange}/>Man </label>
       		<label><input className="uk-radio" type="radio" name="sex" value="false" checked={this.state.selectedOption === 'false'} onChange={this.handleOptionChange}/>Female</label>
           </div>
         </div>

@@ -21,6 +21,7 @@ class App extends Component {
         <ul className="uk-navbar-nav">
             <li className="uk-active"><Link to='/login'>Login</Link></li>
             <li className="uk-parent"><Link to='/registration'>Registration</Link></li>
+            <li className="uk-parent"><Link to='/institutions'>Institutions</Link></li>
         </ul>
     </div>
 </nav>

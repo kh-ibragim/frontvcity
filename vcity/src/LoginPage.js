@@ -9,7 +9,9 @@ constructor(props){
   super(props);
     this.state = {email: '', password:''};
     this.handleSubmit = this.handleSubmit.bind(this);
+    window.localStorage.setItem('rr_login', 'no_login');
  }
+
 
 handleSubmit(event) {
     socket.emit('authenticate', {
@@ -20,10 +22,13 @@ handleSubmit(event) {
     console.log(message); 
     console.log(data); 
     if(data){
+        window.localStorage.setItem('rr_login', data);
         browserHistory.push('/mycity');
     }
     else{
         alert("Incorrect Email or password ");
+        window.localStorage.setItem('rr_login', 'no_login');
+        browserHistory.push('/login');
     }
 
 

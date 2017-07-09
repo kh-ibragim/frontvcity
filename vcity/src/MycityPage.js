@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 
 export default class MycityPage extends Component {
+    static onEnter(nextState, replace) {
+    const login = window.localStorage.getItem('rr_login')
+    if (login === 'no_login') {
+      replace('/login')
+    }
+  }
+
   render() {
     return (
       <div className='container'>

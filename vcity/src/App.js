@@ -6,6 +6,13 @@ injectTapEventPlugin();
 
 class App extends Component {
 
+    log(nextState, replace) {
+    const login = window.localStorage.getItem('rr_login')
+    if (login === 'no_login') {
+      replace('/login')
+    }
+  }
+
   render() {
     return (
       <div>

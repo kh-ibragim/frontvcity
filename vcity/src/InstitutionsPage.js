@@ -4,6 +4,7 @@ export default class InstitutionsPage extends Component {
   render() {
     return (
 <div>
+
 {/*<br/>
     <form class="uk-grid" data-uk-grid>
       <div className="uk-width-1-6@s">
@@ -51,7 +52,29 @@ export default class InstitutionsPage extends Component {
 <div>
         <div data-uk-grid>
             <div className="uk-width-auto@s">
-                <ul className="uk-tab-left" data-uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+
+
+
+
+
+<button className="uk-button uk-button-secondary" type="button">Select</button>
+<div data-uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+    <ul className="uk-nav uk-dropdown-nav">
+        <li className="uk-active"><a href="#">Active</a></li>
+        <li><a href="#">Item</a></li>
+        <li className="uk-nav-header">Header</li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li className="uk-nav-divider"></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+
+
+
+
+                <ul className="uk-tab-left" data-uk-tab="connect: #component-tab-left; animation: uk-animation-fade">             
                     <li><a href="">Institutions 1</a></li>
                     <li><a href="">Institutions 2</a></li>
                     <li><a href="">Institutions 3</a></li>

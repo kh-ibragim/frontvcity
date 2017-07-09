@@ -50,7 +50,7 @@ export default class InstitutionsPage extends Component {
 
 <div>
         <div data-uk-grid>
-            <div className="uk-width-auto@m">
+            <div className="uk-width-auto@s">
                 <ul className="uk-tab-left" data-uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
                     <li><a href="">Institutions 1</a></li>
                     <li><a href="">Institutions 2</a></li>
@@ -62,10 +62,10 @@ export default class InstitutionsPage extends Component {
                 <ul id="component-tab-left" className="uk-switcher">
                   <li>
               
-    <div className="uk-child-width-1-2@m" data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+    <div className="uk-child-width-1-2@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
 
     <div>
-        <div className="uk-card uk-card-default">
+        <div className="uk-card uk-card-secondary">
             <div className="uk-card-media-top">
                 <img src="../images/girl1.jpg" alt=""/>
             </div>
@@ -77,9 +77,9 @@ export default class InstitutionsPage extends Component {
     </div>
 
     <div>
-        <div className="uk-card uk-card-default">
+        <div className="uk-card uk-card-secondary">
             <div className="uk-card-media-top">
-                <img class="uk-align-center" src="../images/girl2.jpg" alt=""/>
+                <img  src="../images/girl2.jpg" alt=""/>
             </div>
             <div className="uk-card-body">
               <p>April 01, 2017</p>
@@ -89,7 +89,7 @@ export default class InstitutionsPage extends Component {
     </div>
 
         <div>
-        <div className="uk-card uk-card-default">
+        <div className="uk-card uk-card-secondary">
             <div className="uk-card-media-top">
                 <img src="../images/girl.jpg" alt=""/>
             </div>
@@ -99,6 +99,21 @@ export default class InstitutionsPage extends Component {
             </div>
         </div>
     </div>
+
+        <div>
+        <div className="uk-card uk-card-secondary">
+            <div className="uk-card-media-top">
+                <img src="../images/girl3.jpg" alt=""/>
+            </div>
+            <div className="uk-card-body">
+              <p>April 01, 2017</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+
+
+
     
 </div>
 

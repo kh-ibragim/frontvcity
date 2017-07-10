@@ -13,7 +13,7 @@ export default class EditProfile extends Component {
 
         <div class="photo-upload" uk-form-custom>
             
-            <input type="file" multiple />
+            <input type="file"  />
         </div>
 
         <div className="uk-margin">

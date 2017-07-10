@@ -1,7 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Map, Marker, Popup, TileLayer} from 'react-leaflet';
+
+
 
 export default class InstitutionsPage extends Component {
+  state = {
+    lat: 51.505,
+    lng: -0.09,
+    zoom: 13,
+  }
+
   render() {
+      const position = [this.state.lat, this.state.lng];
     return (
 <div>
 
@@ -59,7 +69,21 @@ export default class InstitutionsPage extends Component {
 
 <div data-uk-grid>
     <div className="uk-width-3-5@l">
-        <div >Auto</div>
+        <div >Auto
+
+<Map center={position} zoom={this.state.zoom}>
+        <TileLayer
+          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            <span>A pretty CSS3 popup. <br /> Easily customizable.</span>
+          </Popup>
+        </Marker>
+      </Map>
+
+        </div>
     </div>
     <div className="uk-width-1-5@l">
         <div>Expand</div>

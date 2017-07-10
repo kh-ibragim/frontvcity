@@ -111,8 +111,8 @@ render() {
 
         <div className="uk-margin">
           <div className="uk-form-controls">
-      		<label><input className="uk-radio" type="radio" name="sex" value="true" checked={this.state.selectedOption === 'true'}  onChange={this.handleOptionChange}/>Man </label>
-      		<label><input className="uk-radio" type="radio" name="sex" value="false" checked={this.state.selectedOption === 'false'} onChange={this.handleOptionChange}/>Female</label>
+      		<label><input className="uk-radio" type="radio" name="sex" value="true" checked={this.state.selectedOption === 'true'}  onChange={this.handleOptionChange}/>  Man  </label>
+      		<label><input className="uk-radio" type="radio" name="sex" value="false" checked={this.state.selectedOption === 'false'} onChange={this.handleOptionChange}/>  Female</label>
           </div>
         </div>
 

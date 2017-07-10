@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-import { Map, Marker, Popup, TileLayer} from 'react-leaflet';
 
 
 
 export default class InstitutionsPage extends Component {
-  state = {
-    lat: 51.505,
-    lng: -0.09,
-    zoom: 13,
-  }
+
 
   render() {
-      const position = [this.state.lat, this.state.lng];
     return (
 <div>
 
@@ -48,6 +42,26 @@ export default class InstitutionsPage extends Component {
       </div>
 
     </form>*/}
+<div className="uk-section uk-section-muted uk-section uk-padding-remove-vertical">
+
+ <div className="uk-card uk-card-secondary uk-card-small uk-grid-collapse uk-child-width-1-3@s uk-margin" data-uk-grid>
+    <div className="uk-card-media-left uk-overflow-hidden">
+        <img src="../images/girl2.jpg" alt=""/>
+    </div>
+    <div>
+    <div className="uk-card-body">
+        <h3 className="uk-card-title">User Girl</h3>
+    </div>
+    </div>
+    <div className="uk-card-body">
+        <h3 className="uk-card-title">Description</h3>
+    </div>
+</div>
+
+
+    </div>
+
+
 
 
 
@@ -71,17 +85,6 @@ export default class InstitutionsPage extends Component {
     <div className="uk-width-3-5@l">
         <div >Auto
 
-<Map center={position} zoom={this.state.zoom}>
-        <TileLayer
-          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={position}>
-          <Popup>
-            <span>A pretty CSS3 popup. <br /> Easily customizable.</span>
-          </Popup>
-        </Marker>
-      </Map>
 
         </div>
     </div>

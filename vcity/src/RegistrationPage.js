@@ -12,27 +12,18 @@ class Form extends Component {
       password:'',
       email:'',
       age:'',
-      sex: ''
+      sex: '',
+      select: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleOptionChange = this.handleOptionChange.bind(this);
+    this.renderGreetingWidget = this.renderGreetingWidget.bind(this);
   }
-componentDidMount() {
-  var q=[];
-axios({
-  method:'get',
-  url:'http://localhost:3030/interests',
-})
-  .then(function(response) {
-  const template = Object.keys(response.data.data).map(item => q[item]=response.data.data[item].name);
-console.log(template);
-});
-}
 
   getInitialState() {
     return {
       selectedOption: 'true',
-      interests: {}
+      users: []
     };
   }
 
@@ -69,7 +60,39 @@ handleOptionChange(changeEvent) {
 }
 
 
+  renderGreetingWidget() {
+var q=Array;
+var interests;
+axios({
+    method:'get',
+    url:'http://localhost:3030/interests',
+  })
+  .then(function(response) { 
+    const template = Object.keys(response.data.data).map(item => q[item]=response.data.data[item].name);
+    interests=template; 
+    console.log(interests);
+});
+
+//console.log(interests);
+//this.state.select=interests;
+return(
+      <div>
+          <select className="uk-select" id="form-horizontal-select">
+              <option value="">Select your interest</option>
+              <option>{this.state.select}</option>
+              {console.log(this.state.select)}
+          </select>
+
+
+      </div>
+);
+
+
+  }
+
+
 render() {
+
       return (
         
   <div className="uk-section checkin-container">
@@ -108,6 +131,16 @@ render() {
           </div>
         </div>
 
+
+        <div className="uk-margin">
+          <div className="uk-inline">
+              {this.renderGreetingWidget()}
+
+
+
+           </div>
+        </div>
+        
 
         <div className="uk-margin">
           <div className="uk-form-controls">

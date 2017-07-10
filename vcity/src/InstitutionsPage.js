@@ -42,50 +42,37 @@ export default class InstitutionsPage extends Component {
 
 
   <div className="uk-section uk-section-default">       
-    <div className="uk-container">
+    <div className="uk-container uk-container-expand">
 
 
 
 
+<ul className="uk-flex-center" data-uk-tab data-uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+    <li><a href="">Life</a></li>
+    <li><a href="">Meetings</a></li>
+    <li><a href="">Message</a></li>
+</ul>
 
 
-<div>
-        <div data-uk-grid>
-            <div className="uk-width-auto@s">
+<ul className="uk-switcher uk-margin">
+<li>
 
-
-
-
-
-<button className="uk-button uk-button-secondary" type="button">Select</button>
-<div data-uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-    <ul className="uk-nav uk-dropdown-nav">
-        <li className="uk-active"><a href="#">Active</a></li>
-        <li><a href="#">Item</a></li>
-        <li className="uk-nav-header">Header</li>
-        <li><a href="#">Item</a></li>
-        <li><a href="#">Item</a></li>
-        <li className="uk-nav-divider"></li>
-        <li><a href="#">Item</a></li>
-    </ul>
+<div data-uk-grid>
+    <div className="uk-width-3-5@l">
+        <div >Auto</div>
+    </div>
+    <div className="uk-width-1-5@l">
+        <div>Expand</div>
+    </div>
 </div>
 
 
+</li>
 
 
 
-                <ul className="uk-tab-left" data-uk-tab="connect: #component-tab-left; animation: uk-animation-fade">             
-                    <li><a href="">Institutions 1</a></li>
-                    <li><a href="">Institutions 2</a></li>
-                    <li><a href="">Institutions 3</a></li>
-                </ul>
-            </div>
-
-            <div className="uk-width-expand@m">
-                <ul id="component-tab-left" className="uk-switcher">
-                  <li>
-              
-    <div className="uk-child-width-1-2@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+<li>
+    <div className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid >
 
     <div>
         <div className="uk-card uk-card-secondary">
@@ -134,37 +121,46 @@ export default class InstitutionsPage extends Component {
             </div>
         </div>
     </div>
+    </div>
+</li>
 
 
 
-    
+    <li>
+    <div className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+
+
+
+
+
+
+
+</div>
+    </li>
+
+
+    </ul>
+
+
+
+</div>
 </div>
 
-            </li>
-            <li></li>
-            <li></li>
-        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
-</div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-  </div>
-  </div>
     )
   }
 }

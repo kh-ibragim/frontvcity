@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
 import { Link } from 'react-router'
 
+
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');
 
@@ -66,7 +67,7 @@ render() {
                     </div>
             
                     <div className="uk-margin">
-                        <div className="uk-inline full">
+                        <div className="full">
                         <button className="uk-button uk-button-primary uk-button-large full wave radius" type="submit"  value="Submit">Submit
   		                </button>
                       </div>
@@ -75,8 +76,8 @@ render() {
                   </form>
                     <form onSubmit={this.handleReg}>
                     <div className="uk-margin">
-                        <div className="uk-inline full">
-                        <button className="uk-button uk-button-primary uk-button-large full wave radius"  type="submit" >Registration</button>
+                        <div className="full">
+                        <button className="uk-button uk-button-muted uk-button-large full wave radius"  type="submit" >Registration</button>
                       </div>
                        </div>
                     </form>

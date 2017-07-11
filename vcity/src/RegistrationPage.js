@@ -151,9 +151,9 @@ render() {
         </div>
         
 
-        <div className="uk-margin">
+        <div className="uk-margin white radius">
           <div className="uk-form-controls full">
-      		<label><input className="uk-radio" type="radio" name="sex" value="true" checked={this.state.selectedOption === 'true'}  onChange={this.handleOptionChange}/>  Man  </label>
+      		<label><input className="uk-radio" type="radio" name="sex" value="true" checked={this.state.selectedOption === 'true'}  onChange={this.handleOptionChange}/> Man </label>
       		<label><input className="uk-radio" type="radio" name="sex" value="false" checked={this.state.selectedOption === 'false'} onChange={this.handleOptionChange}/>  Female</label>
           </div>
         </div>
@@ -169,7 +169,7 @@ render() {
                     <form onSubmit={this.handleLog}>
                     <div className="uk-margin">
                         <div className="uk-inline full">
-                        <button className="uk-button uk-button-primary  uk-button-large full radius" type="submit" >Login</button>
+                        <button className="uk-button uk-button-muted  uk-button-large full radius" type="submit" >Login</button>
                       </div>
                        </div>
                     </form>

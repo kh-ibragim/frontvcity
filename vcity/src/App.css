@@ -100,6 +100,10 @@ object-fit: cover;
 width: 100%;
 }
 
+.fifty{
+width: 50%;
+}
+
 .wave {
   position: relative;
   cursor: pointer;
@@ -133,4 +137,7 @@ width: 100%;
 
 }
 
-
+.white {
+  background: white;
+  height: 40px;
+}

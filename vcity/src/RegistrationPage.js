@@ -102,7 +102,7 @@ return(
 render() {
 
       return (
-     <div>
+     <div className="tm">
 
   <div className="uk-section checkin-container">
     <div className="uk-container">
@@ -160,7 +160,7 @@ render() {
 
       <div className="uk-margin">
         <div className="uk-inline full">
-          <button className="uk-button uk-button-default uk-button-large full radius" type="submit"  value="Submit"> Submit
+          <button className="uk-button uk-button-primary uk-button-large full radius" type="submit"  value="Submit"> Submit
           </button>
         </div>
       </div>
@@ -169,7 +169,7 @@ render() {
                     <form onSubmit={this.handleLog}>
                     <div className="uk-margin">
                         <div className="uk-inline full">
-                        <button className="uk-button uk-button-default  uk-button-large full radius" type="submit" >Login</button>
+                        <button className="uk-button uk-button-primary  uk-button-large full radius" type="submit" >Login</button>
                       </div>
                        </div>
                     </form>

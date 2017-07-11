@@ -67,7 +67,7 @@ render() {
             
                     <div className="uk-margin">
                         <div className="uk-inline full">
-                        <button className="uk-button uk-button-default uk-button-large full wave radius" type="submit"  value="Submit">Submit
+                        <button className="uk-button uk-button-primary uk-button-large full wave radius" type="submit"  value="Submit">Submit
   		                </button>
                       </div>
                        </div>
@@ -76,7 +76,7 @@ render() {
                     <form onSubmit={this.handleReg}>
                     <div className="uk-margin">
                         <div className="uk-inline full">
-                        <button className="uk-button uk-button-default uk-button-large full wave radius"  type="submit" >Registration</button>
+                        <button className="uk-button uk-button-primary uk-button-large full wave radius"  type="submit" >Registration</button>
                       </div>
                        </div>
                     </form>

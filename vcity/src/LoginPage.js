@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
+import { Link } from 'react-router'
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');
@@ -9,6 +10,7 @@ constructor(props){
   super(props);
     this.state = {email: '', password:''};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReg = this.handleReg.bind(this);
     window.localStorage.setItem('rr_login', 'no_login');
  }
 
@@ -36,35 +38,48 @@ handleSubmit(event) {
     event.preventDefault();
   }
 
+ handleReg(event) { 
+        browserHistory.push('/registration');
+        event.preventDefault();
+  }
+
 render() {
     return (  
-      <div>
+      <div className="tm">
 
-        <div className="uk-section checkin-container">
+        <div className="uk-section  uk-section-large checkin-container">
             <div className="uk-container">
                     <form onSubmit={this.handleSubmit}>
 
                     <div className="uk-margin">
-                        <div className="uk-inline uk-form-password">
+                        <div className="uk-inline full uk-form-password">
                             <span className="uk-form-icon" uk-icon="icon: user"></span>
-                            <input id="icon_prefix" type="text" required className="validate uk-input uk-form-width-large" placeholder="Email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
+                            <input id="icon_prefix" type="text" required className="validate uk-input uk-form-width-large full radius" placeholder="Email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} />
                         </div>
                     </div>
 
                     <div className="uk-margin">
-                        <div className="uk-inline">
+                        <div className="uk-inline full">
                             <span className="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                            <input id="password" type="password" required className="validate uk-input uk-form-width-large" placeholder="Password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
+                            <input id="password" type="password" required className="validate uk-input uk-form-width-large full radius" placeholder="Password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })}/>
                         </div>
                     </div>
             
                     <div className="uk-margin">
-                        <div className="uk-inline">
-                        <button className="uk-button uk-button-danger" type="submit" style={buttonStyle} value="Submit">Submit
+                        <div className="uk-inline full">
+                        <button className="uk-button uk-button-default uk-button-large full wave radius" type="submit"  value="Submit">Submit
   		                </button>
                       </div>
                        </div>
+
                   </form>
+                    <form onSubmit={this.handleReg}>
+                    <div className="uk-margin">
+                        <div className="uk-inline full">
+                        <button className="uk-button uk-button-default uk-button-large full wave radius"  type="submit" >Registration</button>
+                      </div>
+                       </div>
+                    </form>
          </div>
         </div>  
       </div>
@@ -76,6 +91,11 @@ render() {
 
 var buttonStyle = {
   width: '100%',
+};
+
+var back = {
+  background: 'url(${Background})'
+
 };
 
 export default LoginPage;

@@ -75,3 +75,53 @@ p {
   }
 }
 
+.avatar{
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+ 
+}
+.avatar:after{
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+.avatar img{
+position: absolute;
+padding: 2rem;
+min-height: 100%;
+min-width: 100%;
+object-fit: cover;
+}
+
+.full{
+width: 100%;
+}
+
+.wave {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  transition: .3s ease-out;
+}
+
+.radius{
+    border-radius: 20rem;
+}
+
+.tm{
+  /*background-position: center, center;
+  background-size: cover, cover;
+   background-repeat: no-repeat;*/
+   background: linear-gradient(rgba(15,15,15,0.5), rgba(15,15,15,0.5)), url('./files/city-animated.gif') no-repeat fixed 100% 100% / cover;
+}

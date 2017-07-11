@@ -18,7 +18,7 @@ ReactDOM.render(
       <Route path='admin' component={Admin} />
       <Route path='login' component={LoginPage} />
       <Route path='registration' component={RegistrationPage} />
-      <Route path='edit' component={EditPage} />
+      <Route path='edit' component={EditPage} onEnter={MycityPage.onEnter}/>
       <Route path='profile' component={Profile} />
       <Route path='institutions' component={InstitutionsPage} />
       <Route path='mycity' component={MycityPage} onEnter={MycityPage.onEnter}/>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router'
 export default class MycityPage extends Component {
     static onEnter(nextState, replace) {
     const login = window.localStorage.getItem('rr_login')
@@ -13,6 +13,51 @@ export default class MycityPage extends Component {
 
       
 <div>
+        <nav className="uk-navbar-container" data-uk-navbar>
+    <div className="uk-navbar-left">
+        <ul className="uk-navbar-nav">
+            <li className="uk-active"><Link to='/login'>Logout</Link></li>
+            <li className="uk-parent"><Link to='/edit'>Edit Profile</Link></li>
+            <li className="uk-parent"><Link to='/profile'>Profile</Link></li>
+        </ul>
+    </div>
+</nav>
+
+<div className="uk-section uk-section-muted uk-section uk-padding-remove-vertical">
+ <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse uk-child-width-1-3@s uk-margin" data-uk-grid>
+    <div className="uk-card-media-left uk-overflow-hidden">
+        <div className="avatar">
+        <img  className="uk-border-circle"  src="../images/girl2.jpg" alt=""/>
+         </div>
+    </div>
+    <div>
+    <div className="uk-card-body">
+        <h3 className="uk-card-title">User Girl</h3>
+        <p>Description<br/>
+        Interests:
+
+        </p>
+    </div>
+    </div>
+
+    <div>
+    <div className="uk-card-body">
+        <h3 className="uk-card-title">My Posts</h3>
+
+
+
+
+
+    </div>
+    </div>
+
+</div>
+    </div>
+
+
+
+
+
   <div className="uk-section uk-section-default">       
     <div className="uk-container uk-container-expand">
 
@@ -31,7 +76,10 @@ export default class MycityPage extends Component {
 
 <div data-uk-grid>
     <div className="uk-width-3-5@l">
-        <div >Auto</div>
+        <div >Auto
+
+
+        </div>
     </div>
     <div className="uk-width-1-5@l">
         <div>Expand</div>
@@ -117,15 +165,9 @@ export default class MycityPage extends Component {
 
 </div>
 </div>
-
-
-
-
-
-  </div>
+</div>
     )
   }
-
 
 
 

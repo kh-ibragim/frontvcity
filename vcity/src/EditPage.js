@@ -3,10 +3,43 @@ import { Link } from 'react-router'
 
 
 export default class EditProfile extends Component {
-
+    static onEnter(nextState, replace) {
+    const login = window.localStorage.getItem('rr_login')
+    if (login === 'no_login') {
+      replace('/login')
+    }
+  }
 
   render() {
     return (
+      <div>
+                <nav className="uk-navbar-container" data-uk-navbar>
+    <div className="uk-navbar-left">
+        <ul className="uk-navbar-nav">
+            <li className="uk-parent"><Link to='/login'>Logout</Link></li>
+            <li className="uk-active"><Link to='/edit'>Edit Profile</Link></li>
+            <li className="uk-parent"><Link to='/profile'>Profile</Link></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div className="uk-section uk-section-muted uk-section uk-padding-remove-vertical">
+ <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse uk-child-width-1-3@s uk-margin" data-uk-grid>
+    <div className="uk-card-media-left uk-overflow-hidden">
+        <div className="avatar">
+        <img  className="uk-border-circle"  src="../images/girl2.jpg" alt=""/>
+         </div>
+    </div>
+    <div>
+    <div className="uk-card-body">
+        <h3 className="uk-card-title">User Girl</h3>
+    </div>
+    </div>
+</div>
+    </div>
+
+
   <div className="uk-section checkin-container">
     <div className="uk-container">
 
@@ -82,6 +115,7 @@ export default class EditProfile extends Component {
     
 
     </div>
+</div>
 </div>
     )
   }

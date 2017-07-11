@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router'
 
 
 export default class InstitutionsPage extends Component {
@@ -8,7 +8,17 @@ export default class InstitutionsPage extends Component {
   render() {
     return (
 <div>
-
+        <nav className="uk-navbar-container" data-uk-navbar>
+    <div className="uk-navbar-left">
+        <ul className="uk-navbar-nav">
+            <li className="uk-active"><Link to='/login'>Login</Link></li>
+            <li className="uk-parent"><Link to='/registration'>Registration</Link></li>
+            <li className="uk-parent"><Link to='/edit'>Edit Profile</Link></li>
+            <li className="uk-parent"><Link to='/institutions'>Institutions</Link></li>
+            <li className="uk-parent"><Link to='/profile'>Profile</Link></li>
+        </ul>
+    </div>
+</nav>
 {/*<br/>
     <form class="uk-grid" data-uk-grid>
       <div className="uk-width-1-6@s">
@@ -43,21 +53,18 @@ export default class InstitutionsPage extends Component {
 
     </form>*/}
 <div className="uk-section uk-section-muted uk-section uk-padding-remove-vertical">
-
- <div className="uk-card uk-card-secondary uk-card-small uk-grid-collapse uk-child-width-1-3@s uk-margin" data-uk-grid>
+ <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse uk-child-width-1-3@s uk-margin" data-uk-grid>
     <div className="uk-card-media-left uk-overflow-hidden">
-        <img src="../images/girl2.jpg" alt=""/>
+        <div className="avatar">
+        <img  className="uk-border-circle"  src="../images/girl2.jpg" alt=""/>
+         </div>
     </div>
     <div>
     <div className="uk-card-body">
         <h3 className="uk-card-title">User Girl</h3>
     </div>
     </div>
-    <div className="uk-card-body">
-        <h3 className="uk-card-title">Description</h3>
-    </div>
 </div>
-
 
     </div>
 

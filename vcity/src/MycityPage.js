@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-
 export default class MycityPage extends Component {
     static onEnter(nextState, replace) {
     const login = window.localStorage.getItem('rr_login')
@@ -9,6 +8,9 @@ export default class MycityPage extends Component {
       replace('/login')
     }
   }
+
+
+
 
   render() {
     return (
@@ -51,29 +53,41 @@ export default class MycityPage extends Component {
     </div>
 
    </div>
-        {/*navigation tabs*/}
-   <div class="uk-margin-medium-top">
-        <ul className="uk-flex-center" data-uk-tab>
-            <li className="uk-active"><a href="life">Life</a></li>
-            <li><a href="meetings">Meetings</a></li>
-            <li><a href="myposts">My Posts</a></li>
-            <li><a href="messages">Messages</a></li>
-        </ul>
-    </div>
 
-</div>
+
+
+
+
 
 
 
 
 {/*primary info*/}
-  <div className="uk-section uk-section-default">       
-    <div className="uk-container uk-container-expand">
+
+  <div className="uk-section uk-section-default uk-padding-remove ">       
+    <div className="uk-container uk-container-expand ">
 
 
 
+
+        {/*navigation tabs*/}
+
+        <ul className="uk-flex-center uk-margin-remove " data-uk-tab>
+            <li className="uk-active"><a href="">Life</a></li>
+            <li><a href="">Meetings</a></li>
+            <li><a href="">My Posts</a></li>
+            <li><a href="">Messages</a></li>
+        </ul>
+
+
+
+
+
+<ul className="uk-switcher uk-margin">
+
+<li className="uk-active">
 {/*life*/}
-<div id="life" data-uk-grid>
+<div  data-uk-grid>
     <div className="uk-width-3-5@l">
         <div >Auto
         </div>
@@ -82,14 +96,14 @@ export default class MycityPage extends Component {
         <div>Expand</div>
     </div>
 </div>
+</li>
 
-
-
+<li>
 {/*meetings*/}
-    <div id="meetings" className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid >
+    <div  className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid >
 
     <div>
-        <div className="uk-card uk-card-secondary">
+        <div className="uk-card uk-card-default">
             <div className="uk-card-media-top">
                 <img src="../images/girl1.jpg" alt=""/>
             </div>
@@ -101,7 +115,7 @@ export default class MycityPage extends Component {
     </div>
 
     <div>
-        <div className="uk-card uk-card-secondary">
+        <div className="uk-card uk-card-default">
             <div className="uk-card-media-top">
                 <img  src="../images/girl2.jpg" alt=""/>
             </div>
@@ -113,19 +127,20 @@ export default class MycityPage extends Component {
     </div>
 
         <div>
-        <div className="uk-card uk-card-secondary">
+        <div className="uk-card uk-card-default">
             <div className="uk-card-media-top">
                 <img src="../images/girl.jpg" alt=""/>
             </div>
             <div className="uk-card-body">
               <p>April 01, 2017</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                </p>
             </div>
         </div>
     </div>
 
         <div>
-        <div className="uk-card uk-card-secondary">
+        <div className="uk-card uk-card-default">
             <div className="uk-card-media-top">
                 <img src="../images/girl3.jpg" alt=""/>
             </div>
@@ -136,22 +151,69 @@ export default class MycityPage extends Component {
         </div>
     </div>
     </div>
+</li>
 
-
-
+<li>
   {/*mu posts*/}  
-    <div id="myposts" className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+    <div  className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+
+
+
+ <div className="card">
+    <div className="card-image waves-effect waves-block waves-light">
+      <img className="activator" src="../images/girl3.jpg"/>
+    </div>
+    <div className="card-content">
+      <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
+      <p><a href="#">This is a link</a></p>
+    </div>
+    <div className="card-reveal">
+      <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+
 
     </div>
- 
+ </li>
+
+ <li>
  {/*messages*/}
-    <div id="messages" className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
-
+<div  data-uk-grid>
+    <div className="uk-width-3-5@l">
+        <div >Message
+        </div>
     </div>
+    <div className="uk-width-1-5@l">
+        <div>My Messages</div>
+    </div>
+</div>
+</li>
 
-
+</ul>
 </div>
 </div>
+
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+<script>
+    UIkit.tab('.uk-tab');
+</script>
+
 </div>
     )
   }

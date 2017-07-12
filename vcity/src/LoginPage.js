@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
 import { Link } from 'react-router'
-
+import {auth} from 'feathers-authentication-client';
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');
+
+
+
+
 
 class LoginPage extends Component {
 constructor(props){

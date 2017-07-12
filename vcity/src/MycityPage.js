@@ -89,12 +89,26 @@ export default class MycityPage extends Component {
 {/*life*/}
 <div  data-uk-grid>
     <div className="uk-width-3-5@l">
-        <div >Auto
+        <div >
             <Maps />
         </div>
     </div>
-    <div className="uk-width-1-5@l">
-        <div>Expand</div>
+    <div className="uk-width-2-5@l">
+        <div>
+
+    <div>
+        <div className="uk-card uk-card-default">
+            <div className="uk-card-media-top">
+                <img src="../images/young.jpg" alt=""/>
+            </div>
+            <div className="uk-card-body">
+                <p>April 01, 2017</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+
+        </div>
     </div>
 </div>
 </li>

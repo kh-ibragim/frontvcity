@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import Maps from './Maps'
 
 export default class MycityPage extends Component {
     static onEnter(nextState, replace) {
@@ -21,10 +22,9 @@ export default class MycityPage extends Component {
 <nav className="uk-navbar-container" data-uk-navbar>
     <div className="uk-navbar-left">
         <ul className="uk-navbar-nav">
-            <li className="uk-active"><Link to='/login'>Logout</Link></li>
-            <li className="uk-parent"><Link to='/edit'>Edit Profile</Link></li>
-            <li className="uk-parent"><Link to='/profile'>Profile</Link></li>
-        </ul>
+            <li className="uk-active"><Link to='/mycity'>Home</Link></li>
+            <li className="uk-parent"><Link to='/login'>Logout</Link></li>
+        </ul>        
     </div>
 </nav>
 
@@ -90,6 +90,7 @@ export default class MycityPage extends Component {
 <div  data-uk-grid>
     <div className="uk-width-3-5@l">
         <div >Auto
+            <Maps />
         </div>
     </div>
     <div className="uk-width-1-5@l">

@@ -10,6 +10,8 @@ import EditPage from './EditPage'
 import InstitutionsPage from './InstitutionsPage'
 import Profile from './Profile'
 import Admin from './Admin'
+import Geolocation from './Geolocation'
+
 import { Router, Route, browserHistory } from 'react-router'
 
 ReactDOM.render(
@@ -21,6 +23,7 @@ ReactDOM.render(
       <Route path='edit' component={EditPage} onEnter={MycityPage.onEnter}/>
       <Route path='profile' component={Profile} />
       <Route path='institutions' component={InstitutionsPage} />
+      <Route path='geolocation' component={Geolocation} />
       <Route path='mycity' component={MycityPage} onEnter={MycityPage.onEnter}/>
     </Route>
     {/* для всех остальных роутов: показывай NotFound */}

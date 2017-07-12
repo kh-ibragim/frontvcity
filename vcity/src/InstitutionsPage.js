@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
-
+import Maps from './Maps'
 
 export default class InstitutionsPage extends Component {
 
@@ -91,8 +91,6 @@ export default class InstitutionsPage extends Component {
 <div data-uk-grid>
     <div className="uk-width-3-5@l">
         <div >Auto
-
-
         </div>
     </div>
     <div className="uk-width-1-5@l">

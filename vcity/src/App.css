@@ -76,7 +76,7 @@ p {
 }
 
 .avatar{
-  width: 60%;
+  width: 40%;
   overflow: hidden;
   position: relative;
   margin: auto;
@@ -90,7 +90,7 @@ p {
 
 .avatar img{
 position: absolute;
-padding: 2rem;
+padding: 0rem;
 min-height: 100%;
 min-width: 100%;
 object-fit: cover;
@@ -146,3 +146,6 @@ width: 50%;
    background-image: url('./files/pinkcity.gif');
 }
 
+.stnav {
+  background-color:rgb(52,73,94);
+}

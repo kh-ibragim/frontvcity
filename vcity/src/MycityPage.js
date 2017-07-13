@@ -30,9 +30,9 @@ export default class MycityPage extends Component {
 
 {/*second navigation*/}
 <div className="uk-section uk-section-muted uk-section uk-padding-remove-vertical">
- <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse uk-child-width-1-3@s uk-margin" data-uk-grid>
+ <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse  uk-margin uk-width-1-1" data-uk-grid>
     
-    <div className="uk-card-media-left uk-overflow-hidden">
+    <div className="uk-card-media-right uk-overflow-hidden uk-width-1-6@s ">
         <div className="avatar">
             <img  className="uk-border-circle"  src="../images/girl2.jpg" alt=""/>
         </div>
@@ -40,15 +40,13 @@ export default class MycityPage extends Component {
     
     <div>
         <div className="uk-card-body">
-            <h3 className="uk-card-title">User Girl</h3>
-            <p>Description<br/>
-                Interests:</p>
+            <h4 className="uk-card-title uk-child-width-1-2@s">User Girl</h4>
         </div>
     </div>
 
     <div>
-        <div className="uk-card-body">
-            <h3 className="uk-card-title">My Posts</h3>
+        <div className="uk-card-body uk-child-width-1-1">
+            <h4 className="uk-card-title">My Posts</h4>
         </div>
     </div>
 
@@ -88,26 +86,9 @@ export default class MycityPage extends Component {
 <li className="uk-active">
 {/*life*/}
 <div  data-uk-grid>
-    <div className="uk-width-3-5@l">
+    <div className="uk-width-1-1@s">
         <div >
             <Maps />
-        </div>
-    </div>
-    <div className="uk-width-2-5@l">
-        <div>
-
-    <div>
-        <div className="uk-card uk-card-default">
-            <div className="uk-card-media-top">
-                <img src="../images/young.jpg" alt=""/>
-            </div>
-            <div className="uk-card-body">
-                <p>April 01, 2017</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </div>
-        </div>
-    </div>
-
         </div>
     </div>
 </div>
@@ -197,6 +178,9 @@ export default class MycityPage extends Component {
 <div  data-uk-grid>
     <div className="uk-width-3-5@l">
         <div >Message
+
+
+
         </div>
     </div>
     <div className="uk-width-1-5@l">

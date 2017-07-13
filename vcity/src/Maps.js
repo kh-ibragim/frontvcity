@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import L ,{ Marker} from 'leaflet';
+import L ,{ Marker, Popup} from 'leaflet';
 // postCSS import of Leaflet's CSS
 import 'leaflet/dist/leaflet.css';
 
@@ -8,6 +8,14 @@ import {geolocated} from 'react-geolocated';
 // store the map configuration properties in an object,
 // we could also move this to a separate file & import it if desired.
 const position = [44.9605229,34.0897997];
+var greenIcon = L.icon({
+    iconUrl: '../images/marker.png',
+
+
+    iconAnchor:   [50, 75], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0, -50] // point from which the popup should open relative to the iconAnchor
+});
+
 let config = {};
 config.params = {
   center: [44.9605229,34.0897997 ],
@@ -58,13 +66,14 @@ class Maps extends Component {
 
     // a TileLayer is used as the "basemap"
     const tileLayer = L.tileLayer(config.tileLayer.uri, config.tileLayer.params).addTo(map);
+L.marker(position, {icon: greenIcon}).addTo(map).bindPopup("Party");
   }
  
 
   render() {
     return (
       <div id="mapUI">
-          <div ref={(node) => this._mapNode = node} id="map" style={{height: "80vh"} } >
+          <div ref={(node) => this._mapNode = node} id="map" className="mapst" >
               </div>
       </div>
     );

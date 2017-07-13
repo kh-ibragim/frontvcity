@@ -63,14 +63,14 @@ export default class MycityPage extends Component {
 {/*primary info*/}
 
   <div className="uk-section uk-section-default uk-padding-remove ">       
-    <div className="uk-container uk-container-expand ">
+
 
 
 
 
         {/*navigation tabs*/}
 
-        <ul className="uk-flex-center uk-margin-remove " data-uk-tab>
+        <ul className="uk-flex-center uk-margin-remove uk-background-muted" data-uk-tab>
             <li className="uk-active"><a href="">Life</a></li>
             <li><a href="">Meetings</a></li>
             <li><a href="">My Posts</a></li>
@@ -81,12 +81,12 @@ export default class MycityPage extends Component {
 
 
 
-<ul className="uk-switcher uk-margin">
+<ul className="uk-switcher uk-margin-remove uk-padding-remove">
 
 <li className="uk-active">
 {/*life*/}
-<div  data-uk-grid>
-    <div className="uk-width-1-1@s">
+<div  className="uk-margin-remove" >
+    <div className="uk-width-1-1@s uk-margin-remove">
         <div >
             <Maps />
         </div>
@@ -96,62 +96,118 @@ export default class MycityPage extends Component {
 
 <li>
 {/*meetings*/}
-    <div  className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid >
+    <div  className="uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-small uk-grid-match uk-margin-remove-right" data-uk-grid >
 
-    <div>
-        <div className="uk-card uk-card-default">
-            <div className="uk-card-media-top">
-                <img src="../images/girl1.jpg" alt=""/>
+
+
+
+<div className="uk-card uk-card-default uk-box-shadow-hover-xlarge">
+    <div className="uk-card-header">
+        <div className="uk-grid-small uk-flex-middle" data-uk-grid>
+            <div className="uk-width-auto">
+                <img className="smallimg radius" src="../images/girl1.jpg"/>
             </div>
-            <div className="uk-card-body">
-                <p>April 01, 2017</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <div className="uk-width-expand">
+                <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
+                <p className="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
             </div>
         </div>
     </div>
+    <div className="uk-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <div className="uk-card-footer">
+        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        </div>
+    </div>
+</div>
 
-    <div>
-        <div className="uk-card uk-card-default">
-            <div className="uk-card-media-top">
-                <img  src="../images/girl2.jpg" alt=""/>
+
+
+
+
+<div className="uk-card uk-card-default uk-box-shadow-hover-xlarge">
+    <div className="uk-card-header">
+        <div className="uk-grid-small uk-flex-middle" data-uk-grid>
+            <div className="uk-width-auto">
+                <img className="smallimg radius"  src="../images/girl1.jpg"/>
             </div>
-            <div className="uk-card-body">
-              <p>April 01, 2017</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <div className="uk-width-expand">
+                <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
+                <p className="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
             </div>
         </div>
     </div>
+    <div className="uk-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <div className="uk-card-footer">
+        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        </div>
+    </div>
+</div>
 
-        <div>
-        <div className="uk-card uk-card-default">
-            <div className="uk-card-media-top">
-                <img src="../images/girl.jpg" alt=""/>
+
+
+
+
+
+<div className="uk-card uk-card-default uk-box-shadow-hover-xlarge">
+    <div className="uk-card-header">
+        <div className="uk-grid-small uk-flex-middle" data-uk-grid>
+            <div className="uk-width-auto">
+                <img className="smallimg radius"  src="../images/girl1.jpg"/>
             </div>
-            <div className="uk-card-body">
-              <p>April 01, 2017</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
+            <div className="uk-width-expand">
+                <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
+                <p className="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
             </div>
         </div>
     </div>
+    <div className="uk-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <div className="uk-card-footer">
+        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        </div>
+    </div>
+</div>
 
-        <div>
-        <div className="uk-card uk-card-default">
-            <div className="uk-card-media-top">
-                <img src="../images/girl3.jpg" alt=""/>
+
+<div className="uk-card uk-card-default uk-box-shadow-hover-xlarge">
+    <div className="uk-card-header">
+        <div className="uk-grid-small uk-flex-middle" data-uk-grid>
+            <div className="uk-width-auto">
+                <img className="smallimg radius"  src="../images/girl1.jpg"/>
             </div>
-            <div className="uk-card-body">
-              <p>April 01, 2017</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <div className="uk-width-expand">
+                <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
+                <p className="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
             </div>
         </div>
     </div>
+    <div className="uk-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
     </div>
+    <div className="uk-card-footer">
+        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+</div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+
+
+
 </li>
 
 <li>
   {/*mu posts*/}  
-    <div  className="uk-child-width-1-3@s uk-grid-small uk-grid-match " data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+    <div  className="uk-child-width-1-3@s uk-grid-small uk-grid-match uk-margin-remove" data-uk-grid data-uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
 
 
 
@@ -175,7 +231,7 @@ export default class MycityPage extends Component {
 
  <li>
  {/*messages*/}
-<div  data-uk-grid>
+<div className="uk-margin-remove" data-uk-grid>
     <div className="uk-width-3-5@l">
         <div >Message
 
@@ -190,7 +246,7 @@ export default class MycityPage extends Component {
 </li>
 
 </ul>
-</div>
+
 </div>
 
 

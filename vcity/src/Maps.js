@@ -33,7 +33,7 @@ config.tileLayer = {
   params: {
     minZoom: 11,
     maxZoom : 18,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     id: '',
     accessToken: ''
   }
@@ -60,7 +60,9 @@ class Maps extends Component {
   init(id) {
     if (this.state.map) return;
     // this function creates the Leaflet map object and is called after the Map component mounts
-    let map = L.map(id, config.params);
+    let map = L.map(id, config.params , {
+      render: L.svg()
+    });
     L.control.zoom({ position: "bottomleft"}).addTo(map);
     L.control.scale({ position: "bottomleft"}).addTo(map);
 

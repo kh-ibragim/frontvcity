@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
-import { Link } from 'react-router'
-import {auth} from 'feathers-authentication-client';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as UserActions from '../../actions/UserActions'
@@ -13,7 +11,7 @@ const socket = io('http://localhost:3030');
 
 
 
-class LoginPage extends Component {
+export class LoginPage extends Component {
 constructor(props){
   super(props);
     this.state = {email: '', password:''};
@@ -44,7 +42,7 @@ handleSubmit(event) {
 
 });
     event.preventDefault();
-   // this.props.actions.login({name: event.target.elements[0].value});
+    this.props.actions.login({name: event.target.elements[0].value});
   }
 
  handleReg(event) { 
@@ -98,14 +96,6 @@ render() {
 
 }
 
-var buttonStyle = {
-  width: '100%',
-};
-
-var back = {
-  background: 'url(${Background})'
-
-};
 
 function mapStateToProps() {
   return {}
@@ -117,5 +107,5 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-//export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
-export default LoginPage
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+//export default LoginPage

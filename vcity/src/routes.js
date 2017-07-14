@@ -13,7 +13,8 @@ import Geolocation from './components/Maps/Geolocation'
 
 import { Router, Route, browserHistory } from 'react-router'
 
-ReactDOM.render(
+export const routes = (
+  <div>
 <Router history={browserHistory}>    
     <Route path='/' component={App}>
       <Route path='admin' component={Admin} />
@@ -26,6 +27,7 @@ ReactDOM.render(
     </Route>
     {/* для всех остальных роутов: показывай NotFound */}
     <Route path='*' component={NotFound} />
-  </Router>, 
+  </Router> 
 
-document.getElementById('root'));
+  </div>
+)

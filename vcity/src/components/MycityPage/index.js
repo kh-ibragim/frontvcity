@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 import Maps from '../Maps'
 
 export default class MycityPage extends Component {
@@ -121,7 +120,7 @@ export default class MycityPage extends Component {
     <div className="uk-card-header">
         <div className="uk-grid-small uk-flex-middle" data-uk-grid>
             <div className="uk-width-auto">
-                <img className="smallimg radius" src="../images/girl1.jpg"/>
+                <img className="smallimg radius" src="../images/girl1.jpg" alt="User"/>
             </div>
             <div className="uk-width-expand">
                 <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
@@ -133,7 +132,7 @@ export default class MycityPage extends Component {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
     </div>
     <div className="uk-card-footer">
-        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        <div><a href="" className="uk-button uk-button-text">Respond</a>
         </div>
     </div>
 </div>
@@ -146,7 +145,7 @@ export default class MycityPage extends Component {
     <div className="uk-card-header">
         <div className="uk-grid-small uk-flex-middle" data-uk-grid>
             <div className="uk-width-auto">
-                <img className="smallimg radius"  src="../images/girl1.jpg"/>
+                <img className="smallimg radius"  src="../images/girl1.jpg" alt="User"/>
             </div>
             <div className="uk-width-expand">
                 <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
@@ -158,7 +157,7 @@ export default class MycityPage extends Component {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
     </div>
     <div className="uk-card-footer">
-        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        <div><a href="" className="uk-button uk-button-text">Respond</a>
         </div>
     </div>
 </div>
@@ -172,7 +171,7 @@ export default class MycityPage extends Component {
     <div className="uk-card-header">
         <div className="uk-grid-small uk-flex-middle" data-uk-grid>
             <div className="uk-width-auto">
-                <img className="smallimg radius"  src="../images/girl1.jpg"/>
+                <img className="smallimg radius"  src="../images/girl1.jpg" alt="User"/>
             </div>
             <div className="uk-width-expand">
                 <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
@@ -184,7 +183,7 @@ export default class MycityPage extends Component {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
     </div>
     <div className="uk-card-footer">
-        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        <div><a href="" className="uk-button uk-button-text">Respond</a>
         </div>
     </div>
 </div>
@@ -194,7 +193,7 @@ export default class MycityPage extends Component {
     <div className="uk-card-header">
         <div className="uk-grid-small uk-flex-middle" data-uk-grid>
             <div className="uk-width-auto">
-                <img className="smallimg radius"  src="../images/girl1.jpg"/>
+                <img className="smallimg radius"  src="../images/girl1.jpg" alt="User"/>
             </div>
             <div className="uk-width-expand">
                 <h3 className="uk-card-title uk-margin-remove-bottom">Party</h3>
@@ -206,7 +205,7 @@ export default class MycityPage extends Component {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
     </div>
     <div className="uk-card-footer">
-        <div><a href="#" className="uk-button uk-button-text">Respond</a>
+        <div><a href="" className="uk-button uk-button-text">Respond</a>
 </div>
     </div>
 </div>
@@ -229,11 +228,11 @@ export default class MycityPage extends Component {
 
  <div className="card">
     <div className="card-image waves-effect waves-block waves-light">
-      <img className="activator" src="../images/girl3.jpg"/>
+      <img className="activator" src="../images/girl3.jpg" alt="User"/>
     </div>
     <div className="card-content">
       <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <p><a href="">This is a link</a></p>
     </div>
     <div className="card-reveal">
       <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>

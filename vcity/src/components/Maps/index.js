@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import L ,{ Marker, Popup} from 'leaflet';
+import L  from 'leaflet';
 // postCSS import of Leaflet's CSS
 import 'leaflet/dist/leaflet.css';
 

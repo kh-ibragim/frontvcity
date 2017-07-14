@@ -7,7 +7,7 @@ import { render } from 'react-dom'
 import configureStore from './store/configureStore'
 
 injectTapEventPlugin();
-// const store = configureStore();
+//const store = configureStore;
 class App extends Component {
 
     log(nextState, replace) {

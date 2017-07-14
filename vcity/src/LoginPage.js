@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
 import { Link } from 'react-router'
 import {auth} from 'feathers-authentication-client';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as UserActions from './actions/UserActions'
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');
@@ -41,6 +44,7 @@ handleSubmit(event) {
 
 });
     event.preventDefault();
+   // this.props.actions.login({name: event.target.elements[0].value});
   }
 
  handleReg(event) { 
@@ -103,4 +107,15 @@ var back = {
 
 };
 
-export default LoginPage;
+function mapStateToProps() {
+  return {}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(UserActions, dispatch)
+  }
+}
+
+//export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+export default LoginPage

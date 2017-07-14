@@ -19,36 +19,52 @@ export default class MycityPage extends Component {
 <div>
 
 {/*navigation*/}
-<nav className="uk-navbar-container" data-uk-navbar>
-    <div className="uk-navbar-left">
+{/*<nav className="uk-navbar-container" data-uk-navbar>
+    <div className="uk-navbar-right">
         <ul className="uk-navbar-nav">
-            <li className="uk-active"><Link to='/mycity'>Home</Link></li>
-            <li className="uk-parent"><Link to='/login'>Logout</Link></li>
+            <li className="uk-parent"><Link to='/login'><img className="iconsize" src="../images/logout.png" alt=""/></Link></li>
         </ul>        
     </div>
-</nav>
+       
+
+</nav>*/}
 
 {/*second navigation*/}
-<div className="uk-section uk-section-muted uk-section uk-padding-remove-vertical">
- <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse  uk-margin uk-width-1-1" data-uk-grid>
+<div className="uk-section uk-section-muted uk-section uk-padding-remove-top uk-padding-remove-bottom ">
+ <div className="uk-card uk-card-muted uk-card-small uk-grid-collapse  uk-margin  uk-width-1-1 sect uk-margin-remove" data-uk-grid>
     
-    <div className="uk-card-media-right uk-overflow-hidden uk-width-1-6@s ">
+    <div className="uk-card-media-right uk-overflow-hidden uk-width-1-5@s ">
         <div className="avatar">
             <img  className="uk-border-circle"  src="../images/girl2.jpg" alt=""/>
         </div>
     </div>
-    
-    <div>
-        <div className="uk-card-body">
-            <h4 className="uk-card-title uk-child-width-1-2@s">User Girl</h4>
-        </div>
-    </div>
 
-    <div>
-        <div className="uk-card-body uk-child-width-1-1">
-            <h4 className="uk-card-title">My Posts</h4>
+    {/*<div className="uk-card-media-right uk-overflow-hidden uk-width-1-5@s ">
+        <div className="uk-flex">
+            <div className="uk-card uk-card-muted uk-card-body">
+                <img  className="userimg radsuserimg"  src="../images/girl2.jpg" alt=""/>
+            </div>
         </div>
+    </div>*/}
+
+
+    
+{/*<div className="uk-card-media-left uk-overflow-hidden uk-width-expand@s ">
+ <div className="uk-flex">
+    <div className="uk-card uk-card-muted uk-card-body">
+        <img  className="userimg"  src="../images/girl2.jpg" alt=""/>
     </div>
+    <div className="uk-card uk-card-muted uk-card-body">
+        <img  className="userimg"  src="../images/girl2.jpg" alt=""/>
+    </div>
+    <div className="uk-card uk-card-muted uk-card-body">
+        <img  className="userimg"  src="../images/girl2.jpg" alt=""/>
+    </div>
+ </div>
+</div>*/}
+
+
+    
 
    </div>
 
@@ -96,7 +112,7 @@ export default class MycityPage extends Component {
 
 <li>
 {/*meetings*/}
-    <div  className="uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-small uk-grid-match uk-margin-remove-right" data-uk-grid >
+    <div  className=" uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-medium  uk-margin-top uk-margin-remove-right" data-uk-grid >
 
 
 

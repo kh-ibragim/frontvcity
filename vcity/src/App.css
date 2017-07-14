@@ -151,11 +151,25 @@ width: 50%;
 }
 
 .mapst{
-  height: 73.3vh;
+  height: 78vh;
 
 }
 
 .smallimg{
   width: 5em;
   height: 5em;
+}
+
+.userimg{
+  width: 9em;
+  height: 7em;
+  
+}
+
+.radsuserimg{
+    border-radius: 10rem;
+}
+
+.sect{
+  padding-top: 1rem;
 }

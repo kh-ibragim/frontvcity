@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import {auth} from 'feathers-authentication-client';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as UserActions from './actions/UserActions'
+import * as UserActions from '../../actions/UserActions'
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:3030');

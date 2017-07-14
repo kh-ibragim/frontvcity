@@ -4,7 +4,7 @@ import './App.css';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { render } from 'react-dom'
-import configureStore from './store/configureStore'
+import configureStore from '../../store/configureStore'
 
 injectTapEventPlugin();
 //const store = configureStore;

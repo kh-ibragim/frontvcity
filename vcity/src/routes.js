@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import NotFound from './NotFound'
-import LoginPage from './LoginPage'
-import RegistrationPage from './RegistrationPage'
-import MycityPage from './MycityPage'
-import EditPage from './EditPage'
-import InstitutionsPage from './InstitutionsPage'
-import Profile from './Profile'
-import Admin from './Admin'
-import Geolocation from './Geolocation'
+import App from './containers/App';
+import NotFound from './components/NotFound'
+import LoginPage from './components/LoginPage'
+import RegistrationPage from './components/RegistrationPage'
+import MycityPage from './components/MycityPage'
+import EditPage from './components/MycityPage/EditPage'
+import Profile from './components/MycityPage/Profile'
+import Admin from './components/Admin'
+import Geolocation from './components/Maps/Geolocation'
 
 import { Router, Route, browserHistory } from 'react-router'
 
@@ -22,7 +21,6 @@ ReactDOM.render(
       <Route path='registration' component={RegistrationPage} />
       <Route path='edit' component={EditPage} onEnter={MycityPage.onEnter}/>
       <Route path='profile' component={Profile} />
-      <Route path='institutions' component={InstitutionsPage} />
       <Route path='geolocation' component={Geolocation} />
       <Route path='mycity' component={MycityPage} onEnter={MycityPage.onEnter}/>
     </Route>

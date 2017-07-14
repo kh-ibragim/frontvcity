@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Maps from './Maps'
+import Maps from '../Maps'
 
 export default class MycityPage extends Component {
     static onEnter(nextState, replace) {
